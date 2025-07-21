@@ -189,7 +189,7 @@ setMethod("calIndex", signature = "Startrac", definition = Startrac.calIndex)
 #' @name pIndex
 #' @aliases pIndex pIndex,Startrac-method
 #'
-#' @importFrom data.table dcast
+#' @importFrom shape2 dcast
 #' @importFrom plyr ldply adply
 #' @importFrom utils combn
 #' @importFrom parallel makeCluster stopCluster detectCores
@@ -306,7 +306,7 @@ setMethod("pIndex", signature = "Startrac", definition = Startrac.pIndex)
 #' @aliases getSig getSig,Startrac-method
 #' 
 #' @importFrom plyr laply
-#' @importFrom data.table melt
+#' @importFrom shape2 melt
 #' @param obj A Startrac object
 #' @param obj.perm A list of Startrac objects from permutation data 
 #' @return an object of class \code{Startrac}
@@ -424,7 +424,8 @@ setMethod("show",
 #' @aliases plot plot,StartracOut-method
 #' 
 #' @importFrom plyr laply
-#' @importFrom data.table melt as.data.table melt
+#' @importFrom reshape2 melt
+#' @importFrom data.table as.data.table
 #' @importFrom ggpubr ggbarplot ggboxplot
 #' @importFrom ggplot2 facet_wrap theme element_text aes geom_text
 #' @importFrom ComplexHeatmap Heatmap
